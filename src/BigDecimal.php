@@ -23,7 +23,7 @@ final class BigDecimal extends BigNumber
      *
      * @var string
      */
-    private $value;
+    private string $value;
 
     /**
      * The scale (number of digits after the decimal point) of this decimal number.
@@ -32,7 +32,7 @@ final class BigDecimal extends BigNumber
      *
      * @var int
      */
-    private $scale;
+    private int $scale;
 
     /**
      * Protected constructor. Use a factory method to obtain an instance.

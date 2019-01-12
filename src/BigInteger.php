@@ -26,7 +26,7 @@ final class BigInteger extends BigNumber
      *
      * @var string
      */
-    private $value;
+    private string $value;
 
     /**
      * Protected constructor. Use a factory method to obtain an instance.

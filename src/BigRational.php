@@ -21,14 +21,14 @@ final class BigRational extends BigNumber
      *
      * @var BigInteger
      */
-    private $numerator;
+    private BigInteger $numerator;
 
     /**
      * The denominator. Always strictly positive.
      *
      * @var BigInteger
      */
-    private $denominator;
+    private BigInteger $denominator;
 
     /**
      * Protected constructor. Use a factory method to obtain an instance.

@@ -19,7 +19,7 @@ class NativeCalculator extends Calculator
      *
      * @var int
      */
-    private $maxDigits = 0;
+    private int $maxDigits = 0;
 
     /**
      * Class constructor.

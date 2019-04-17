@@ -130,21 +130,20 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
             return $ord >> (8 - $bit) & 1;
         };
 
-        $mantissa = BigDecimal::one();
+        $number = BigDecimal::one();
 
         for ($bit = 1; $bit <= 52; $bit++) {
             if ($testMantissaBit($bit)) {
-                $delta = BigDecimal::one()->exactlyDividedBy(BigDecimal::of(2)->power($bit));
-                $mantissa = $mantissa->plus($delta);
+                $delta = BigDecimal::one()->dividedBy(BigDecimal::of(2)->power($bit), $bit);
+                $number = $number->plus($delta);
             }
         }
 
-        $number = $mantissa;
-
-        $power = BigDecimal::of(2)->power($exponent < 0 ? -$exponent : $exponent);
+        $exponentAbs = ($exponent < 0 ? -$exponent : $exponent);
+        $power = BigDecimal::of(2)->power($exponentAbs);
 
         if ($exponent < 0) {
-            $number = $number->exactlyDividedBy($power);
+            $number = $number->dividedBy($power, $number->getScale() + $exponentAbs);
         } else {
             $number = $number->multipliedBy($power);
         }

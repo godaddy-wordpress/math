@@ -61,13 +61,11 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
             return new BigInteger((string) $value);
         }
 
-        if (is_float($value)) {
-            $locData = localeconv();
-
-            $value = str_replace([$locData['thousands_sep'], $locData['decimal_point']], ['', '.'], (string) $value);
-        } else {
-            $value = (string) $value;
+        if (\is_float($value)) {
+            return self::convertFloat($value);
         }
+
+        $value = (string) $value;
 
         if (\preg_match(self::PARSE_REGEXP, $value, $matches) !== 1) {
             throw new NumberFormatException(\sprintf('The given value "%s" does not represent a valid number.', $value));
@@ -105,6 +103,59 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
         $integral = self::cleanUp($matches['integral']);
 
         return new BigInteger($integral);
+    }
+
+    /**
+     * @param float $number
+     *
+     * @return BigDecimal
+     */
+    private static function convertFloat(float $number) : BigDecimal
+    {
+        $bin = pack('E', $number);
+
+        $sign = ord($bin[0]) >> 7 & 1;
+
+        $twoBytes = substr($bin, 0, 2);
+        $elevenBits = $twoBytes & "\x7F\xF0";
+
+        $exponent = unpack('nx', $elevenBits)['x'] >> 4;
+        $exponent -= 1023;
+
+        $testMantissaBit = function(int $bit) use ($bin) : int {
+            $bit += 12;
+            $index = intdiv($bit-1, 8);
+            $ord = ord($bin[$index]);
+            $bit -= $index * 8;
+            return $ord >> (8 - $bit) & 1;
+        };
+
+        $mantissa = BigDecimal::one();
+
+        for ($bit = 1; $bit <= 52; $bit++) {
+            if ($testMantissaBit($bit)) {
+                $delta = BigDecimal::one()->exactlyDividedBy(BigDecimal::of(2)->power($bit));
+                $mantissa = $mantissa->plus($delta);
+            }
+        }
+
+        $number = $mantissa;
+
+        $power = BigDecimal::of(2)->power($exponent < 0 ? -$exponent : $exponent);
+
+        if ($exponent < 0) {
+            $number = $number->exactlyDividedBy($power);
+        } else {
+            $number = $number->multipliedBy($power);
+        }
+
+        $number = $number->stripTrailingZeros();
+
+        if ($sign === 1) {
+            $number = $number->negated();
+        }
+
+        return $number;
     }
 
     /**

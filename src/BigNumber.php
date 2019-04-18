@@ -113,6 +113,24 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
     private static function convertFloat(float $number) : BigDecimal
     {
         $bin = pack('E', $number);
+        $hex = bin2hex($bin);
+
+        if ($hex === '0000000000000000' || $hex === '8000000000000000') {
+            return BigDecimal::zero();
+        }
+
+        $hex3 = substr($hex, 0, 3);
+        $hex13 = substr($hex, 3);
+
+        if ($hex3 === '7ff' || $hex3 === 'fff') {
+            if ($hex13 === '0000000000000') {
+                $message = 'Cannot represent infinity as a BigNumber.';
+            } else {
+                $message = 'Cannot represent NaN as a BigNumber.';
+            }
+
+            throw new NumberFormatException($message);
+        }
 
         $sign = ord($bin[0]) >> 7 & 1;
 

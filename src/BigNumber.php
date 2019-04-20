@@ -138,6 +138,7 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
         $elevenBits = $twoBytes & "\x7F\xF0";
 
         $exponent = unpack('nx', $elevenBits)['x'] >> 4;
+        $isSubnormal = ($exponent === 0);
         $exponent -= 1023;
 
         $testBit = function(int $bit) use ($bin) : int {
@@ -148,11 +149,12 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
             return $ord >> (7 - $bit) & 1;
         };
 
-        $number = BigDecimal::one();
+        $number = $isSubnormal ? BigDecimal::zero() : BigDecimal::one();
 
         for ($bit = 0; $bit < 52; $bit++) {
             if ($testBit($bit + 12)) {
-                $delta = BigDecimal::one()->dividedBy(BigDecimal::of(2)->power($bit + 1), $bit + 1);
+                $pow = $isSubnormal ? $bit : $bit + 1;
+                $delta = BigDecimal::one()->dividedBy(BigDecimal::of(2)->power($pow), $pow);
                 $number = $number->plus($delta);
             }
         }

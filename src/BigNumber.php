@@ -140,19 +140,19 @@ abstract class BigNumber implements \Serializable, \JsonSerializable
         $exponent = unpack('nx', $elevenBits)['x'] >> 4;
         $exponent -= 1023;
 
-        $testMantissaBit = function(int $bit) use ($bin) : int {
-            $bit += 12;
-            $index = intdiv($bit-1, 8);
+        $testBit = function(int $bit) use ($bin) : int {
+            $index = intdiv($bit, 8);
             $ord = ord($bin[$index]);
             $bit -= $index * 8;
-            return $ord >> (8 - $bit) & 1;
+
+            return $ord >> (7 - $bit) & 1;
         };
 
         $number = BigDecimal::one();
 
-        for ($bit = 1; $bit <= 52; $bit++) {
-            if ($testMantissaBit($bit)) {
-                $delta = BigDecimal::one()->dividedBy(BigDecimal::of(2)->power($bit), $bit);
+        for ($bit = 0; $bit < 52; $bit++) {
+            if ($testBit($bit + 12)) {
+                $delta = BigDecimal::one()->dividedBy(BigDecimal::of(2)->power($bit + 1), $bit + 1);
                 $number = $number->plus($delta);
             }
         }

@@ -1,5 +1,11 @@
 ## SkyVerge\Math
 
+### A fork of the `brick/math` library to enable usage in distributed WordPress plugins
+
+The library namespace is replaced with `SkyVerge\Math` to avoid version conflicts when installing in a distributed manner (WordPress). Note that this change is only applied to the 0.5 version of the library, in order to support PHP 7.0. Other versions of the library remain unaffected in this fork.
+
+You should be able to use this as a drop-in replacement by simply using the `Skyverge\Math` namespace instead of `Brick\Math`. 
+
 <img src="https://raw.githubusercontent.com/brick/brick/master/logo.png" alt="" align="left" height="64">
 
 A library to work with arbitrary precision numbers.
@@ -19,7 +25,7 @@ Just define the following requirement in your `composer.json` file:
 ```json
 {
     "require": {
-        "brick/math": "0.5.*"
+        "skyverge/math": "0.5.*"
     }
 }
 ```

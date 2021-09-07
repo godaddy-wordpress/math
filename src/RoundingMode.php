@@ -1,6 +1,6 @@
 <?php
 
-namespace Brick\Math;
+namespace SkyVerge\Math;
 
 /**
  * Specifies a rounding behavior for numerical operations capable of discarding precision.

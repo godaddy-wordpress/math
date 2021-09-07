@@ -1,8 +1,8 @@
 <?php
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Internal\Calculator;
 
 /**
  * Tests for Calculator implementation detection.

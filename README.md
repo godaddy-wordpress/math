@@ -1,4 +1,4 @@
-## Brick\Math
+## SkyVerge\Math
 
 <img src="https://raw.githubusercontent.com/brick/brick/master/logo.png" alt="" align="left" height="64">
 
@@ -49,7 +49,7 @@ for a list of changes introduced by each further `0.x.0` version.
 
 ### Package contents
 
-This library provides the following public classes in the [Brick\Math](http://brick.io/math/namespace-Brick.Math.html) namespace:
+This library provides the following public classes in the [SkyVerge\Math](http://brick.io/math/namespace-Brick.Math.html) namespace:
 
 - [BigNumber](http://brick.io/math/class-Brick.Math.BigNumber.html): base class for `BigInteger`, `BigDecimal` and `BigRational`
 - [BigInteger](http://brick.io/math/class-Brick.Math.BigInteger.html): represents an arbitrary-precision integer number.
@@ -57,7 +57,7 @@ This library provides the following public classes in the [Brick\Math](http://br
 - [BigRational](http://brick.io/math/class-Brick.Math.BigRational.html): represents an arbitrary-precision rational number (fraction).
 - [RoundingMode](http://brick.io/math/class-Brick.Math.RoundingMode.html): holds constants for the [rounding modes](http://brick.io/math/class-Brick.Math.RoundingMode.html).
 
-And the following exceptions in the [Brick\Math\Exception](http://brick.io/math/namespace-Brick.Math.Exception.html) namespace:
+And the following exceptions in the [SkyVerge\Math\Exception](http://brick.io/math/namespace-Brick.Math.Exception.html) namespace:
 
 - [ArithmeticException](http://brick.io/math/class-Brick.Math.Exception.ArithmeticException.html): base class for all exceptions
 - [DivisionByZeroException](http://brick.io/math/class-Brick.Math.Exception.DivisionByZeroException.html): thrown when a division by zero occurs

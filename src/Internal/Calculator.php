@@ -1,9 +1,9 @@
 <?php
 
-namespace Brick\Math\Internal;
+namespace SkyVerge\Math\Internal;
 
-use Brick\Math\RoundingMode;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\RoundingMode;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * Performs basic operations on arbitrary size integers.

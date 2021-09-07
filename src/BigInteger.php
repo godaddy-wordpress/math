@@ -1,11 +1,11 @@
 <?php
 
-namespace Brick\Math;
+namespace SkyVerge\Math;
 
-use Brick\Math\Exception\ArithmeticException;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\RoundingNecessaryException;
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Exception\ArithmeticException;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\Internal\Calculator;
 
 /**
  * An arbitrary-size integer.

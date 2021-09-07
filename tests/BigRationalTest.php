@@ -1,11 +1,11 @@
 <?php
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigInteger;
-use Brick\Math\BigRational;
-use Brick\Math\RoundingMode;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\BigRational;
+use SkyVerge\Math\RoundingMode;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * Unit tests for class BigRational.
@@ -41,7 +41,7 @@ class BigRationalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testNdWithZeroDenominator()
     {
@@ -79,7 +79,7 @@ class BigRationalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testOfWithZeroDenominator()
     {
@@ -88,7 +88,7 @@ class BigRationalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerOfInvalidString
-     * @expectedException \Brick\Math\Exception\NumberFormatException
+     * @expectedException \SkyVerge\Math\Exception\NumberFormatException
      *
      * @param string $string An invalid string representation.
      */
@@ -440,7 +440,7 @@ class BigRationalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testReciprocalOfZeroThrowsException()
     {
@@ -905,7 +905,7 @@ class BigRationalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerToIntegerThrowsException
-     * @expectedException \Brick\Math\Exception\ArithmeticException
+     * @expectedException \SkyVerge\Math\Exception\ArithmeticException
      *
      * @param string $number A valid rational number that cannot safely be converted to a native integer.
      */

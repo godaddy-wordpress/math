@@ -1,11 +1,11 @@
 <?php
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigInteger;
-use Brick\Math\RoundingMode;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\RoundingMode;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * Unit tests for class BigInteger.
@@ -91,7 +91,7 @@ class BigIntegerTest extends AbstractTestCase
 
     /**
      * @dataProvider providerOfInvalidFormatThrowsException
-     * @expectedException \Brick\Math\Exception\NumberFormatException
+     * @expectedException \SkyVerge\Math\Exception\NumberFormatException
      *
      * @param string|number $value
      */
@@ -124,7 +124,7 @@ class BigIntegerTest extends AbstractTestCase
 
     /**
      * @dataProvider providerOfNonConvertibleValueThrowsException
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      *
      * @param float|string $value
      */
@@ -399,7 +399,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      */
     public function testMinOfNonIntegerValuesThrowsException()
     {
@@ -443,7 +443,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      */
     public function testMaxOfNonIntegerValuesThrowsException()
     {
@@ -1117,7 +1117,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testQuotientOfZeroThrowsException()
     {
@@ -1138,7 +1138,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testRemainerOfZeroThrowsException()
     {
@@ -1162,7 +1162,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testQuotientAndRemainerOfZeroThrowsException()
     {
@@ -1233,7 +1233,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testQuotientAndRemainderByZeroThrowsException()
     {
@@ -1729,7 +1729,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\ArithmeticException
+     * @expectedException \SkyVerge\Math\Exception\ArithmeticException
      */
     public function testToIntegerNegativeOverflowThrowsException()
     {
@@ -1737,7 +1737,7 @@ class BigIntegerTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\ArithmeticException
+     * @expectedException \SkyVerge\Math\Exception\ArithmeticException
      */
     public function testToIntegerPositiveOverflowThrowsException()
     {

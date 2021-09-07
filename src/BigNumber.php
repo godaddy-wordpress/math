@@ -1,11 +1,11 @@
 <?php
 
-namespace Brick\Math;
+namespace SkyVerge\Math;
 
-use Brick\Math\Exception\ArithmeticException;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\NumberFormatException;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\Exception\ArithmeticException;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\NumberFormatException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * Common interface for arbitrary-precision rational numbers.

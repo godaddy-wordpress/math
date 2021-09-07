@@ -1,6 +1,6 @@
 <?php
 
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Internal\Calculator;
 
 require 'vendor/autoload.php';
 

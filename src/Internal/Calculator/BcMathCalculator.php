@@ -1,8 +1,8 @@
 <?php
 
-namespace Brick\Math\Internal\Calculator;
+namespace SkyVerge\Math\Internal\Calculator;
 
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Internal\Calculator;
 
 /**
  * Calculator implementation built around the bcmath library.

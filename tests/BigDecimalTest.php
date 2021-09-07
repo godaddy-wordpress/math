@@ -1,11 +1,11 @@
 <?php
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigDecimal;
-use Brick\Math\RoundingMode;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\BigDecimal;
+use SkyVerge\Math\RoundingMode;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * Unit tests for class BigDecimal.
@@ -164,7 +164,7 @@ class BigDecimalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerOfInvalidValueThrowsException
-     * @expectedException \Brick\Math\Exception\NumberFormatException
+     * @expectedException \SkyVerge\Math\Exception\NumberFormatException
      *
      * @param string $value
      */
@@ -309,7 +309,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      */
     public function testMinOfNonDecimalValuesThrowsException()
     {
@@ -361,7 +361,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      */
     public function testMaxOfNonDecimalValuesThrowsException()
     {
@@ -620,7 +620,7 @@ class BigDecimalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerDividedByByZeroThrowsException
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      *
      * @param string|number $zero
      */
@@ -703,7 +703,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testExactlyDividedByZero()
     {
@@ -712,7 +712,7 @@ class BigDecimalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerDividedByWithRoundingNecessaryThrowsException
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      *
      * @param string $a     The base number.
      * @param string $b     The number to divide by.
@@ -1353,7 +1353,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testQuotientOfZeroThrowsException()
     {
@@ -1361,7 +1361,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testRemainderOfZeroThrowsException()
     {
@@ -1369,7 +1369,7 @@ class BigDecimalTest extends AbstractTestCase
     }
 
     /**
-     * @expectedException \Brick\Math\Exception\DivisionByZeroException
+     * @expectedException \SkyVerge\Math\Exception\DivisionByZeroException
      */
     public function testQuotientAndRemainderOfZeroThrowsException()
     {
@@ -2069,7 +2069,7 @@ class BigDecimalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerToBigIntegerThrowsExceptionWhenRoundingNecessary
-     * @expectedException \Brick\Math\Exception\RoundingNecessaryException
+     * @expectedException \SkyVerge\Math\Exception\RoundingNecessaryException
      *
      * @param string $decimal A decimal number with a non-zero fractional part.
      */
@@ -2172,7 +2172,7 @@ class BigDecimalTest extends AbstractTestCase
 
     /**
      * @dataProvider providerToIntegerThrowsException
-     * @expectedException \Brick\Math\Exception\ArithmeticException
+     * @expectedException \SkyVerge\Math\Exception\ArithmeticException
      *
      * @param string $number A valid decimal number that cannot safely be converted to a native integer.
      */

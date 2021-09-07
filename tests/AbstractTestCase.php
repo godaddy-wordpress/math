@@ -1,10 +1,10 @@
 <?php
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigDecimal;
-use Brick\Math\BigInteger;
-use Brick\Math\BigRational;
+use SkyVerge\Math\BigDecimal;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\BigRational;
 
 /**
  * Base class for math tests.

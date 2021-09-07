@@ -1,6 +1,6 @@
 <?php
 
-namespace Brick\Math\Exception;
+namespace SkyVerge\Math\Exception;
 
 /**
  * Exception thrown when a number cannot be represented at the requested scale without rounding.

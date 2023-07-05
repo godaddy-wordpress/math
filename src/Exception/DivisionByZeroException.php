@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Exception;
+namespace SkyVerge\Math\Exception;
 
 /**
  * Exception thrown when a division by zero occurs.

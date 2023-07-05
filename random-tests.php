@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Internal\Calculator;
 
 (new class(30) { // max digits
     private $gmp;

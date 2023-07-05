@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigDecimal;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\MathException;
-use Brick\Math\Exception\NegativeNumberException;
-use Brick\Math\Exception\NumberFormatException;
-use Brick\Math\Exception\RoundingNecessaryException;
-use Brick\Math\RoundingMode;
+use SkyVerge\Math\BigDecimal;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\MathException;
+use SkyVerge\Math\Exception\NegativeNumberException;
+use SkyVerge\Math\Exception\NumberFormatException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\RoundingMode;
 
 /**
  * Unit tests for class BigDecimal.

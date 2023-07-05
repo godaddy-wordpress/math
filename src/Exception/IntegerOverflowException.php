@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Exception;
+namespace SkyVerge\Math\Exception;
 
-use Brick\Math\BigInteger;
+use SkyVerge\Math\BigInteger;
 
 /**
  * Exception thrown when an integer overflow occurs.

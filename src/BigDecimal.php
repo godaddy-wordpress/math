@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math;
+namespace SkyVerge\Math;
 
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\MathException;
-use Brick\Math\Exception\NegativeNumberException;
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\MathException;
+use SkyVerge\Math\Exception\NegativeNumberException;
+use SkyVerge\Math\Internal\Calculator;
 
 /**
  * Immutable, arbitrary-precision signed decimal numbers.

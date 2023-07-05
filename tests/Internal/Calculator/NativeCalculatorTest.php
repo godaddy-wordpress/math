@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests\Internal\Calculator;
+namespace SkyVerge\Math\Tests\Internal\Calculator;
 
-use Brick\Math\Internal\Calculator\NativeCalculator;
-use Brick\Math\Tests\AbstractTestCase;
+use SkyVerge\Math\Internal\Calculator\NativeCalculator;
+use SkyVerge\Math\Tests\AbstractTestCase;
 
 /**
  * Unit tests for class NativeCalculator.

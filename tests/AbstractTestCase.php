@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigDecimal;
-use Brick\Math\BigInteger;
-use Brick\Math\BigRational;
+use SkyVerge\Math\BigDecimal;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\BigRational;
 
 use PHPUnit\Framework\TestCase;
 

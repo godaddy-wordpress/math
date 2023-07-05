@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\Internal\Calculator;
+use SkyVerge\Math\Internal\Calculator;
 
 use PHPUnit\Framework\TestCase;
 

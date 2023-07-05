@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math;
+namespace SkyVerge\Math;
 
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\MathException;
-use Brick\Math\Exception\NumberFormatException;
-use Brick\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\MathException;
+use SkyVerge\Math\Exception\NumberFormatException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
 
 /**
  * An arbitrarily large rational number.

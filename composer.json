@@ -1,5 +1,5 @@
 {
-    "name": "brick/math",
+    "name": "skyverge/math",
     "description": "Arbitrary-precision arithmetic library",
     "type": "library",
     "keywords": [
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Brick\\Math\\": "src/"
+            "SkyVerge\\Math\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Brick\\Math\\Tests\\": "tests/"
+            "SkyVerge\\Math\\Tests\\": "tests/"
         }
     }
 }

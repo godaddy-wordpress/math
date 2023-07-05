@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigInteger;
-use Brick\Math\BigRational;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\MathException;
-use Brick\Math\Exception\NumberFormatException;
-use Brick\Math\Exception\RoundingNecessaryException;
-use Brick\Math\RoundingMode;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\BigRational;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\MathException;
+use SkyVerge\Math\Exception\NumberFormatException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\RoundingMode;
 
 /**
  * Unit tests for class BigRational.

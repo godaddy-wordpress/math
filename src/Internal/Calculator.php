@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Internal;
+namespace SkyVerge\Math\Internal;
 
-use Brick\Math\Exception\RoundingNecessaryException;
-use Brick\Math\RoundingMode;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\RoundingMode;
 
 /**
  * Performs basic operations on arbitrary size integers.

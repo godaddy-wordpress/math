@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Brick\Math\Tests;
+namespace SkyVerge\Math\Tests;
 
-use Brick\Math\BigInteger;
-use Brick\Math\Exception\IntegerOverflowException;
-use Brick\Math\Exception\MathException;
-use Brick\Math\Exception\NegativeNumberException;
-use Brick\Math\Exception\NumberFormatException;
-use Brick\Math\Exception\DivisionByZeroException;
-use Brick\Math\Exception\RoundingNecessaryException;
-use Brick\Math\Internal\Calculator;
-use Brick\Math\RoundingMode;
+use SkyVerge\Math\BigInteger;
+use SkyVerge\Math\Exception\IntegerOverflowException;
+use SkyVerge\Math\Exception\MathException;
+use SkyVerge\Math\Exception\NegativeNumberException;
+use SkyVerge\Math\Exception\NumberFormatException;
+use SkyVerge\Math\Exception\DivisionByZeroException;
+use SkyVerge\Math\Exception\RoundingNecessaryException;
+use SkyVerge\Math\Internal\Calculator;
+use SkyVerge\Math\RoundingMode;
 
 use Generator;
 

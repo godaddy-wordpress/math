@@ -16,7 +16,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.0"
+          php-version: "8.1"
 
       - name: Install composer dependencies
         uses: "ramsey/composer-install@v1"
@@ -31,12 +31,9 @@ jobs:
     strategy:
       matrix:
         php-version:
-          - "7.1"
-          - "7.2"
-          - "7.3"
-          - "7.4"
           - "8.0"
           - "8.1"
+          - "8.2"
         calculator:
           - GMP
           - BCMath
@@ -54,13 +51,6 @@ jobs:
 
       - name: Install composer dependencies
         uses: "ramsey/composer-install@v1"
-        if: ${{ matrix.php-version != '8.1' }}
-
-      - name: Install composer dependencies (PHP 8.1)
-        uses: "ramsey/composer-install@v1"
-        with:
-          composer-options: "--ignore-platform-reqs"
-        if: ${{ matrix.php-version == '8.1' }}
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit
